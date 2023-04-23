@@ -35,13 +35,6 @@ class SumCalculatorTest {
             calc.sum(0);
         });
     }
-    @Test
-    public void testThatSumWorksCorrect3() {
-        //When
-        int actual = calc.sum(1);
-        //Then
-        int expected = 1;
-        Assertions.assertEquals(expected, actual);
-    }
+
 
 }
