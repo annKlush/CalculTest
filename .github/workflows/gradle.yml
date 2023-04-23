@@ -11,8 +11,8 @@ jobs:
 
     strategy:
       matrix:
-        java: [adopt@1.11, adopt@1.12]
-        node: [16.x, 14.x]
+        java: [adopt@1.12]
+        node: [16.x]
 
     steps:
       - name: Checkout code
