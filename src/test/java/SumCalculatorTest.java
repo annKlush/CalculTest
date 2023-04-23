@@ -39,9 +39,9 @@ class SumCalculatorTest {
     @Test
     public void testThatSumWorksCorrect3() {
         //When
-        int actual = calc.sum(4);
+        int actual = calc.sum(3);
         //Then
-        int expected = 10;
+        int expected = 6;
         Assertions.assertEquals(expected, actual);
     }
 }
