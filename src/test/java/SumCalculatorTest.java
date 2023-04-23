@@ -11,7 +11,6 @@ class SumCalculatorTest {
        calc = new SumCalculator();
      }
 
-
     @Test
     public void testThatSumWorksCorrect1() {
         //When
@@ -35,5 +34,14 @@ class SumCalculatorTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> {
             calc.sum(0);
         });
+    }
+
+    @Test
+    public void testThatSumWorksCorrect3() {
+        //When
+        int actual = calc.sum(2);
+        //Then
+        int expected = 3;
+        Assertions.assertEquals(expected, actual);
     }
 }
