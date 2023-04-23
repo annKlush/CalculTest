@@ -8,25 +8,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        java: [adopt@1.11, adopt@1.12]
-        node: [16.x, 14.x]
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-      - name: Setup JDK ${{ matrix.java }}
+      - name: Setup Java
         uses: actions/setup-java@v2
         with:
-          java-version: ${{ matrix.java }}
-
-      - name: Setup Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node }}
+          java-version: '11'
 
       - name: Build and test with Gradle
         run: ./gradlew test
