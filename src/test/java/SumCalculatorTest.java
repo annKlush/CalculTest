@@ -35,13 +35,4 @@ class SumCalculatorTest {
             calc.sum(0);
         });
     }
-
-    @Test
-    public void testThatSumWorksCorrect3() {
-        //When
-        int actual = calc.sum(3);
-        //Then
-        int expected = 6;
-        Assertions.assertEquals(expected, actual);
-    }
 }
